@@ -1,0 +1,19 @@
+version: "3"
+services:
+  webapp:
+    container_name: webapp
+    build:
+      context: ./
+      dockerfile: dockerfile.staging
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src/components:/webapp/src/components:cached
+      - ./src/hooks:/webapp/src/hooks:cached
+      - ./src/lib:/webapp/src/lib:cached
+      - ./src/models:/webapp/src/models:cached
+      - ./src/providers:/webapp/src/providers:cached
+      - ./src/routes:/webapp/src/routes:cached
+      - ./src/services:/webapp/src/services:cached
+      - ./src/stories:/webapp/src/stories:cached
+volumes: {}

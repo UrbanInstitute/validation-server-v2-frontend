@@ -1,0 +1,47 @@
+# Introduction to Storybook
+
+Storybook is an open-source tool for developing UI components in isolation.
+It's particularly valuable for building and documenting component libraries.
+In this guide, we'll cover the basics of Storybook and how to use it effectively for the Urban Institute Validation Server Frontend component library.
+
+## What is Storybook?
+
+Storybook is a development environment for UI components, where you can:
+
+- Develop and test components in isolation.
+- Document and showcase your components.
+- Collaborate with your team on UI components.
+
+## Getting Started
+
+### 1. Installation
+
+Before you can start using Storybook, you need to install it. If you haven't already, you can install Storybook by installing the packages for this repo:
+
+```bash
+npm install
+```
+
+### 2. Running
+
+To run storybook, run the `storybook` script:
+
+```bash
+npm run storybook
+```
+
+This will start up a development server that will allow you to interact with the components and to preview them as you modify and or add new ones.
+
+### 3. Developing
+
+Storybook uses the components that the application uses.
+It runs separately from the application, so you do not need to worry about the application logic while modifying the components.
+This allows you to create and edit the components in ways that allows them to be re-usable.
+
+Each component in this repository is located under `src/components/`.
+Every component has it's own directory that allows for sub-components to be located alongside the primarily-used component.
+For example, it does not make sense for every component in a stepper to be located separately, so the individual stepper components are located under `src/components/Stepper`.
+
+To view the components, Storybook uses `story` files.
+These files are located under `src/stories` and are named like `[component].stories.ts`.
+Storybook will recognize the `stories` and use those files in the Storybook application.

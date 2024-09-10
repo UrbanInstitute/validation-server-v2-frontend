@@ -1,0 +1,1 @@
+export const STEPS = { SUBMIT: 1, REVIEW_AND_REFINE: 2, RELEASE: 3 };
